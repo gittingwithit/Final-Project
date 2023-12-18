@@ -14,6 +14,28 @@ knitr::opts_chunk$set(
 )
 ```
 
+Package of Functions to Help Track Personal Finances: Spend Track.
+Currently this package includes a function for parsing data from the pdf PNC bank statements download as, a function with flexibility in analyses of spending, and a function for making visualizing the analysis data in a one line step.
+
+
+Load the package
 ```{r setup}
 library(SPENDTRACK)
 ```
+
+
+Parse PNC download
+```{r}
+parse_pdf(demo_data1_parsepdf)
+```
+
+Run various spend analyses depending on preference, example of July Amazon spending below
+```{r}
+Spend_analysis(demo_data2_analysis,7,"Amazon")
+```
+
+Visualize data in a plot (fun patterns to ease worries about spending)
+```{r}
+Visualize_spend(demo_data3_plot,demo_data3_plot$X,demo_data3_plot$amount_spent)
+```
+
